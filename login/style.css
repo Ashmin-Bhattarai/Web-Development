@@ -1,0 +1,97 @@
+html{
+    height: 100%;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-box{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 80%;
+    min-width: 300px;
+    max-width: 400px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0.6);
+    /* box-shadow: x-offset y-offset blur-radius (spread-radius) color; */
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.login-box h1{
+    margin: 0 0 30px; /* top horizental buttom */
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box{
+    position: relative;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0px; /* vertically horizontally */
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label{
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding: 10px 0px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 13px;
+}
+
+.login-box button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    background: transparent;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    /* top: 40px; */
+    margin-top: 40px; 
+    border-radius: 10px;
+    /* top 40 or margin 40 both will give 40px space above button */
+    /* here top will work becouse position is set to relative */
+    /* if position was absolute top will work relative to main div is div with class login-box */
+    letter-spacing: 4px;
+    border: none;
+}
+
+.login-box button:hover{
+    background-color: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
